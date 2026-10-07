@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium - BootstrapMade</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root { --primary-dark: #023b6d; }
+    body { font-family: 'Roboto', sans-serif; background-color: rgba(236, 242, 250, 0.36); }
+    .header-container { background: rgba(255, 255, 255, 0.9); border-radius: 50px; }
+    .custom-dropdown-menu { border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); border: none; padding: 1rem; min-width: 240px; }
+    .pricing-card { background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; }
+    .pricing-featured { background: linear-gradient(135deg, #023b6d 0%, #012545 100%); color: #fff; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Global -->
+  <header class="fixed-top mt-3">
+    <div class="container">
+      <div class="header-container d-flex align-items-center justify-content-between px-4 py-2 border">
+        <!-- Logo enlazado a home.html -->
+        <a class="navbar-brand fw-bold fs-4" href="home.html" style="color: var(--primary-dark);">
+          <i class="bi bi-bootstrap-fill me-2 text-info fs-3"></i> BootstrapMade
+        </a>
+        <div class="d-flex align-items-center gap-2">
+          <input type="text" class="form-control rounded-pill d-none d-md-block" placeholder="Buscar..." style="width: 180px;">
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary rounded-pill px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown">Menú</button>
+            <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu">
+              <li><a class="dropdown-item" href="home.html"><i class="bi bi-house me-2"></i>Ir a Inicio</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="templates.html">Templates</a></li>
+              <li><a class="dropdown-item" href="bootstrap-builder.html">Bootstrap Builder</a></li>
+              <li><a class="dropdown-item" href="portfolio-builder.html">Portfolio Builder</a></li>
+              <li><a class="dropdown-item fw-bold text-primary" href="premium.html">Premium</a></li>
+              <li><a class="dropdown-item" href="license.html">License</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-info fw-bold" href="members.html"><i class="bi bi-person me-2"></i>Members</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Premium -->
+  <main class="container my-5 pt-5">
+    <div class="text-center my-4">
+      <h1 class="fw-bold" style="color: var(--primary-dark);">Membresía Premium y Licencias</h1>
+      <p class="text-muted">Descarga ilimitada, elimina los créditos del pie de página y accede a soporte prioritario.</p>
+    </div>
+
+    <div class="row g-4 align-items-center justify-content-center">
+      <div class="col-md-5 col-lg-4">
+        <div class="pricing-card p-4 shadow-sm text-center">
+          <h3 class="fw-bold">Plantilla Única</h3>
+          <div class="display-5 fw-bold my-3">$19.99 <span class="fs-6 text-muted">USD</span></div>
+          <ul class="list-unstyled my-4 text-start small">
+            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>1 Plantilla a elección</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Sin créditos de autor</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Uso en 1 sitio web</li>
+          </ul>
+          <button class="btn btn-outline-primary rounded-pill w-100">Comprar Ahora</button>
+        </div>
+      </div>
+
+      <div class="col-md-5 col-lg-4">
+        <div class="pricing-card pricing-featured p-4 shadow text-center position-relative">
+          <span class="badge bg-danger position-absolute top-0 start-50 translate-middle rounded-pill px-3 py-2">MÁS POPULAR</span>
+          <h3 class="fw-bold text-white mt-2">Acceso por un año </h3>
+          <div class="display-4 fw-bold text-white my-3">$99.99  <span class="fs-6 text-white-50">USD</span></div>
+          <ul class="list-unstyled my-4 text-start small text-white-50">
+            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i><strong>+175 Plantillas</strong> actuales e ilimitadas</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Acceso a futuras plantillas</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Proyectos e dominios ilimitados</li>
+            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Soporte prioritario 24/7</li>
+          </ul>
+          <button class="btn btn-success rounded-pill w-100 fw-bold py-2">Obtener Oferta $99.9</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
