@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!j$m67srk$1j^h+6&9h@$5dlgvvg#we421iacv*+b!l^$!=&zh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = FALSE
 
 ALLOWED_HOSTS = ['127.0.0.1','https://msolorzano3429.pythonanywhere.com']
 
@@ -117,7 +117,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Descomenta esto solamente si tienes una carpeta
+# llamada "static" en la raíz de tu proyecto.
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',
+# ]
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
