@@ -63,7 +63,7 @@
     <div class="container">
       <div class="header-container d-flex align-items-center justify-content-between px-4 py-2">
         <!-- Logo enlazado a home.html -->
-        <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2" href="home.html" style="color: var(--primary-dark);">
+        <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2" href="{% url 'home' %}" style="color: var(--primary-dark);">
           <i class="bi bi-bootstrap-fill text-info fs-3"></i>
           <span>BOOTSTRAPMADE</span>
         </a>
@@ -74,16 +74,15 @@
           <div class="dropdown">
             <button class="btn btn-outline-secondary rounded-pill px-3 dropdown-toggle" type="button" data-bs-toggle="dropdown">Menú</button>
             <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu">
-              <li><a class="dropdown-item" href="home.html"><i class="bi bi-house me-2"></i>Ir a Inicio</a></li>
+              <li><a class="dropdown-item" href="{% url 'home' %}"><i class="bi bi-house me-2"></i>Ir a Inicio</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="templates.html">Templates</a></li>
-              <li><a class="dropdown-item" href="bootstrap-builder.html">Bootstrap Builder</a></li>
-              <li><a class="dropdown-item" href="portfolio-builder.html">Portfolio Builder</a></li>
-              <li><a class="dropdown-item" href="premium.html">Premium</a></li>
-              <li><a class="dropdown-item" href="license.html">License</a></li>
-              <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              <li><a class="dropdown-item" href="{% url 'bootstrap_builder' %}">Bootstrap Builder</a></li>
+              <li><a class="dropdown-item" href="{% url 'portfolio_builder' %}">Portfolio Builder</a></li>
+              <li><a class="dropdown-item" href="{% url 'premium' %}">Premium</a></li>
+              <li><a class="dropdown-item" href="{% url 'license' %}">License</a></li>
+              <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-info fw-bold" href="members.html"><i class="bi bi-person me-2"></i>Members</a></li>
+              <li><a class="dropdown-item text-info fw-bold" href="{% url 'members' %}"><i class="bi bi-person me-2"></i>Members</a></li>
             </ul>
           </div>
         </div>
@@ -103,14 +102,19 @@
 
           <h2 class="fw-bold h4 mb-2" style="color: var(--primary-dark);">Crear Nueva Cuenta</h2>
           <p class="text-muted small mb-4">Regístrate para acceder a tus plantillas, licencias y descargas exclusivas.</p>
-
-          <form class="text-start">
-            <!-- Nombre Completo -->
+{% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+    {% endif %}
+          <form class="text-start" method="POST">
+            {% csrf_token %}
+              <!-- Nombre Completo -->
             <div class="mb-3">
               <label for="fullName" class="form-label fw-medium text-dark small">Nombre Completo</label>
               <div class="input-group">
                 <span class="input-group-text bg-light"><i class="bi bi-person text-muted"></i></span>
-                <input type="text" id="fullName" class="form-control" placeholder="Michael Solorzano" required>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Nombre" required>
               </div>
             </div>
 
@@ -119,7 +123,7 @@
               <label for="email" class="form-label fw-medium text-dark small">Correo Electrónico</label>
               <div class="input-group">
                 <span class="input-group-text bg-light"><i class="bi bi-envelope text-muted"></i></span>
-                <input type="email" id="email" class="form-control" placeholder="tu@gmail.com" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="tu@gmail.com" required>
               </div>
             </div>
 
@@ -128,7 +132,7 @@
               <label for="password" class="form-label fw-medium text-dark small">Contraseña</label>
               <div class="input-group">
                 <span class="input-group-text bg-light"><i class="bi bi-lock text-muted"></i></span>
-                <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
               </div>
             </div>
 
@@ -137,7 +141,7 @@
               <label for="confirmPassword" class="form-label fw-medium text-dark small">Confirmar Contraseña</label>
               <div class="input-group">
                 <span class="input-group-text bg-light"><i class="bi bi-shield-lock text-muted"></i></span>
-                <input type="password" id="confirmPassword" class="form-control" placeholder="••••••••" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="••••••••" required>
               </div>
             </div>
 
@@ -145,7 +149,7 @@
             <div class="form-check mb-4">
               <input class="form-check-input" type="checkbox" id="terms" required>
               <label class="form-check-label small text-muted" for="terms">
-                Acepto los <a href="license.html" class="text-decoration-none text-info">Términos de servicio</a> y las políticas de privacidad.
+                Acepto los <a href="{% url 'license' %}" class="text-decoration-none text-info">Términos de servicio</a> y las políticas de privacidad.
               </label>
             </div>
 
@@ -157,7 +161,7 @@
             <!-- Enlace para volver al Login -->
             <div class="text-center mt-3">
               <span class="small text-muted">¿Ya tienes una cuenta?</span>
-              <a href="members.html" class="small text-decoration-none fw-bold text-primary ms-1">Inicia sesión aquí</a>
+              <a href="{% url 'members' %}" class="small text-decoration-none fw-bold text-primary ms-1">Inicia sesión aquí</a>
             </div>
           </form>
 

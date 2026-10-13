@@ -164,12 +164,12 @@
               <li><a class="dropdown-item" href="#">Portfolio Themes</a></li>
             </ul>
           </div>
-
-          <a href="#" class="nav-link-custom">Bootstrap Builder</a>
-          <a href="#" class="nav-link-custom">Portfolio Builder</a>
-          <a href="#" class="nav-link-custom">Premium</a>
-          <a href="#" class="nav-link-custom">License</a>
-          <a href="#" class="nav-link-custom">Contact</a>
+            
+          <a href="{% url 'bootstrap_builder' %}" class="nav-link-custom">Bootstrap Builder</a>
+          <a href="{% url 'portfolio_builder' %}" class="nav-link-custom">Portfolio Builder</a>
+          <a href="{% url 'premium' %}" class="nav-link-custom">Premium</a>
+          <a href="{% url 'license' %}" class="nav-link-custom">License</a>
+          <a href="{% url 'contact' %}" class="nav-link-custom">Contact</a>
 
           <a href="#" class="nav-link-custom d-flex align-items-center gap-1">
             <i class="bi bi-person fs-5"></i> Members
@@ -195,16 +195,15 @@
               <i class="bi bi-list fs-1 lh-1"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu">
-              <li><a class="dropdown-item" href="#"><i class="bi bi-house me-2"></i>Ir a Inicio</a></li>
+              <li><a class="dropdown-item" href="{% url 'home' %}"><i class="bi bi-house me-2"></i>Ir a Inicio</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Templates</a></li>
-              <li><a class="dropdown-item" href="#">Bootstrap Builder</a></li>
-              <li><a class="dropdown-item" href="#">Portfolio Builder</a></li>
-              <li><a class="dropdown-item" href="#">Premium</a></li>
-              <li><a class="dropdown-item" href="#">License</a></li>
-              <li><a class="dropdown-item" href="#">Contact</a></li>
+              <li><a class="dropdown-item fw-bold text-primary" href="{% url 'bootstrap_builder' %}">Bootstrap Builder</a></li>
+              <li><a class="dropdown-item" href="{% url 'portfolio_builder' %}">Portfolio Builder</a></li>
+              <li><a class="dropdown-item" href="{% url 'premium' %}">Premium</a></li>
+              <li><a class="dropdown-item" href="{% url 'license' %}">License</a></li>
+              <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item members-link" href="#"><i class="bi bi-person fs-5"></i> Members</a></li>
+              <li><a class="dropdown-item text-info fw-bold" href="{% url 'members' %}"><i class="bi bi-person me-2"></i>Members</a></li>
             </ul>
           </div>
 
@@ -231,22 +230,22 @@
           <!-- Lista de Categorías con enlaces locales -->
           <div class="category-list d-flex flex-column gap-1 pe-1" id="categoryList">
 
-            <a href="#" class="category-item active d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3">
+            <a href="{% url 'business' %}" class="category-item active d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3">
               <span class="fw-medium">Business</span>
               <span class="badge rounded-pill bg-info-subtle text-primary fw-normal px-2 py-1">87</span>
             </a>
 
-            <a href="#" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+            <a href="{% url 'Portafolio' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
               <span class="fw-medium">Portfolio</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">18</span>
             </a>
 
-            <a href="#" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
-              <span class="fw-medium">Admin</span>
+            <a href="{% url 'members' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+              <span class="fw-medium">Members</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">10</span>
             </a>
 
-            <a href="#" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+            <a href="{% url 'education' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
               <span class="fw-medium">Education</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">7</span>
             </a>
@@ -298,7 +297,7 @@
                 LuxEstate delivers sophisticated real estate sites with high-end visuals, interactive property maps, and seamless listing tools. Ideal for agents showcasing luxury homes and closing deals faster in real estate.
               </p>
               <div class="d-flex flex-wrap gap-2">
-                <a href="bootstrap-builder.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1">Edit Online</a>
+                <a href="{% url 'bootstrap_builder' %}" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1">Edit Online</a>
                 <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1">Live Demo</a>
                 <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1">Download</a>
               </div>

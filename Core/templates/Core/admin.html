@@ -25,18 +25,17 @@
   <header class="fixed-top mt-3">
     <div class="container">
       <div class="header-container d-flex align-items-center justify-content-between px-4 py-2">
-        <a class="navbar-brand d-flex align-items-center gap-2 me-3" href="home.html">
+        <a class="navbar-brand d-flex align-items-center gap-2 me-3" href="{% url 'home' %}">
           <i class="bi bi-bootstrap-fill fs-3 text-info"></i>
           <span class="fw-bold fs-4" style="color: var(--primary-dark);">BOOTSTRAPMADE</span>
         </a>
         <nav class="d-none d-lg-flex align-items-center gap-4">
-          <a href="templates.html" class="nav-link-custom">Templates</a>
-          <a href="bootstrap-builder.html" class="nav-link-custom">Bootstrap Builder</a>
-          <a href="portfolio-builder.html" class="nav-link-custom">Portfolio Builder</a>
-          <a href="premium.html" class="nav-link-custom">Premium</a>
-          <a href="license.html" class="nav-link-custom">License</a>
-          <a href="contact.html" class="nav-link-custom">Contact</a>
-          <a href="members.html" class="nav-link-custom d-flex align-items-center gap-1"><i class="bi bi-person fs-5"></i> Members</a>
+          <a href="{% url 'bootstrap_builder' %}" class="nav-link-custom">Bootstrap Builder</a>
+          <a href="{% url 'portfolio_builder' %}" class="nav-link-custom">Portfolio Builder</a>
+          <a href="{% url 'premium' %}" class="nav-link-custom">Premium</a>
+          <a href="{% url 'license' %}" class="nav-link-custom">License</a>
+          <a href="{% url 'contact' %}" class="nav-link-custom">Contact</a>
+          <a href="{% url 'members' %}" class="nav-link-custom d-flex align-items-center gap-1"><i class="bi bi-person fs-5"></i> Members</a>
         </nav>
       </div>
     </div>
@@ -47,19 +46,19 @@
       <aside class="col-lg-3">
         <div class="sidebar-card shadow-sm">
           <div class="category-list d-flex flex-column gap-1 pe-1">
-            <a href="business.html" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+            <a href="{% url 'business' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
               <span class="fw-medium">Business</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">87</span>
             </a>
-            <a href="portfolio.html" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+            <a href="{% url 'Portafolio' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
               <span class="fw-medium">Portfolio</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">18</span>
             </a>
-            <a href="admin.html" class="category-item active d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3">
+            <a href="{% url 'admin' %}" class="category-item active d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3">
               <span class="fw-medium">Admin</span>
               <span class="badge rounded-pill bg-info-subtle text-primary fw-normal px-2 py-1">10</span>
             </a>
-            <a href="education.html" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+            <a href="{% url 'education' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
               <span class="fw-medium">Education</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">7</span>
             </a>
