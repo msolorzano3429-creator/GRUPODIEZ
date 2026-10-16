@@ -6,7 +6,10 @@ from django.shortcuts import render, redirect
 # Create your views here.
 
 def home(request):
-    return render(request, 'Core/home.html')
+    usuario = User.objects.all()
+    return render(request, 'Core/home.html', {
+        "usuarios": usuario
+    })
 def corto(request):
     return render(request, 'Core/corto.html')
 def bootstrap_builder(request):

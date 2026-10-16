@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free & Premium Bootstrap Templates & Themes - BootstrapMade</title>
+  <title>PLANTILLAS Y TEMAS PARA TUS PRESENTACIONES</title>
 
   <!-- CSS de Bootstrap 5 (Versión Estable) -->
   <link href="{% static  'bootstrap_5_0_2/css/bootstrap.min.css'  %}" rel="stylesheet">
@@ -148,48 +148,44 @@
         <!-- Logo Principal: Conectado a home.html -->
         <a class="navbar-brand d-flex align-items-center gap-2 me-3" href="#">
           <i class="bi bi-bootstrap-fill fs-3 text-info"></i>
-          <span class="fw-bold fs-4 tracking-tight" style="color: var(--primary-dark); font-family: 'Poppins', sans-serif;">BOOTSTRAPMADE</span>
+          <span class="fw-bold fs-4 tracking-tight" style="color: var(--primary-dark); font-family: 'Poppins', sans-serif;">PLANMAX</span>
         </a>
 
         <!-- Menú de Navegación Horizontal (Pantallas Grandes >= 992px) -->
         <nav class="d-none d-lg-flex align-items-center gap-4">
           <div class="dropdown">
             <a class="nav-link-custom dropdown-toggle" href="#" id="templatesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-              Templates
+              Tipo de plantillas
             </a>
             <ul class="dropdown-menu shadow-sm border-0 rounded-3" aria-labelledby="templatesDropdown">
-              <li><a class="dropdown-item" href="#">Todos los Templates</a></li>
-              <li><a class="dropdown-item" href="#">Business Templates</a></li>
-              <li><a class="dropdown-item" href="#">Admin Templates</a></li>
-              <li><a class="dropdown-item" href="#">Portfolio Themes</a></li>
+              <li><a class="dropdown-item" href="{% url 'home' %}">Todas las plantillas</a></li>
+              <li><a class="dropdown-item" href="{% url 'premium' %}">Premium</a></li>
+              <li><a class="dropdown-item" href="{% url 'bootstrap_builder' %}">Tus plantillas</a></li>
+              <li><a class="dropdown-item" href="{% url 'contact' %}">Contactos</a></li>
             </ul>
           </div>
             
-          <a href="{% url 'bootstrap_builder' %}" class="nav-link-custom">Bootstrap Builder</a>
-          <a href="{% url 'portfolio_builder' %}" class="nav-link-custom">Portfolio Builder</a>
+          <a href="{% url 'bootstrap_builder' %}" class="nav-link-custom">Crea tus plantillas</a>
+          <a href="{% url 'portfolio_builder' %}" class="nav-link-custom">Portafolio personal</a>
           <a href="{% url 'premium' %}" class="nav-link-custom">Premium</a>
-          <a href="{% url 'license' %}" class="nav-link-custom">License</a>
-          <a href="{% url 'contact' %}" class="nav-link-custom">Contact</a>
+          <a href="{% url 'license' %}" class="nav-link-custom">Licencia</a>
+          <a href="{% url 'contact' %}" class="nav-link-custom">Contacto</a>
 
-          <a href="#" class="nav-link-custom d-flex align-items-center gap-1">
-            <i class="bi bi-person fs-5"></i> Members
+          <a href="{% url 'members' %}" class="nav-link-custom d-flex align-items-center gap-1">
+            <i class="bi bi-person fs-5"></i> Perfil
           </a>
         </nav>
 
         <div class="d-flex align-items-center gap-3">
 
           <!-- Buscador Completo -->
-          <div class="position-relative d-none d-md-block" style="width: 180px;">
+          <!--<div class="position-relative d-none d-md-block" style="width: 180px;">
             <input type="text" class="form-control search-input-top py-1" placeholder="Search">
             <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
-          </div>
+          </div> -->
 
-          <!-- Lupa sola (Móvil) -->
-          <button class="btn border-0 p-0 text-dark d-md-none" type="button" aria-label="Search">
-            <i class="bi bi-search fs-4"></i>
-          </button>
 
-          <!-- Menú Hamburguesa -->
+          <!-- Menú Hamburguesa-->
           <div class="dropdown d-lg-none">
             <button class="btn border-0 p-0 text-dark shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menú">
               <i class="bi bi-list fs-1 lh-1"></i>
@@ -197,13 +193,13 @@
             <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu">
               <li><a class="dropdown-item" href="{% url 'home' %}"><i class="bi bi-house me-2"></i>Ir a Inicio</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item fw-bold text-primary" href="{% url 'bootstrap_builder' %}">Bootstrap Builder</a></li>
-              <li><a class="dropdown-item" href="{% url 'portfolio_builder' %}">Portfolio Builder</a></li>
+              <li><a class="dropdown-item fw-bold text-primary" href="{% url 'bootstrap_builder' %}">Crea tus plantillas</a></li>
+              <li><a class="dropdown-item" href="{% url 'portfolio_builder' %}">Portafolio Personal</a></li>
               <li><a class="dropdown-item" href="{% url 'premium' %}">Premium</a></li>
-              <li><a class="dropdown-item" href="{% url 'license' %}">License</a></li>
-              <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
+              <li><a class="dropdown-item" href="{% url 'license' %}">Licencia</a></li>
+              <li><a class="dropdown-item" href="{% url 'contact' %}">Contacto</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-info fw-bold" href="{% url 'members' %}"><i class="bi bi-person me-2"></i>Members</a></li>
+              <li><a class="dropdown-item text-info fw-bold" href="{% url 'members' %}"><i class="bi bi-person me-2"></i>Perfil</a></li>
             </ul>
           </div>
 
@@ -230,24 +226,37 @@
           <!-- Lista de Categorías con enlaces locales -->
           <div class="category-list d-flex flex-column gap-1 pe-1" id="categoryList">
 
-            <a href="{% url 'business' %}" class="category-item active d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3">
-              <span class="fw-medium">Business</span>
+            <a href="{% url 'bootstrap_builder' %}" class="category-item active d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3">
+              <span class="fw-medium">Crea tus plantillas</span>
               <span class="badge rounded-pill bg-info-subtle text-primary fw-normal px-2 py-1">87</span>
             </a>
 
-            <a href="{% url 'Portafolio' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
-              <span class="fw-medium">Portfolio</span>
+            <a href="{% url 'portfolio_builder' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+              <span class="fw-medium">Portafolio Personal</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">18</span>
             </a>
 
-            <a href="{% url 'members' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
-              <span class="fw-medium">Members</span>
+            <a href="{% url 'license' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+              <span class="fw-medium">Licencia</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">10</span>
             </a>
 
+            <a href="{% url 'Portafolio' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+              <span class="fw-medium">Plantillas de Portafolio</span>
+              <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">18</span>
+            </a>
+
             <a href="{% url 'education' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
-              <span class="fw-medium">Education</span>
+              <span class="fw-medium">Plantillas de Educacion</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">7</span>
+            </a>
+
+            <a href="{% url 'admin' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+              <span class="fw-medium">
+                          Acceso Admin
+              </span>
+              <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">4
+              </span>
             </a>
 
           </div>

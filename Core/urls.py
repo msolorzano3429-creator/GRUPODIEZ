@@ -4,9 +4,9 @@ from Core import views
 
 
 urlpatterns = [
-     path('', views.home, name='home'),
+     path('', views.log_in, name='members'),
      path('corto/', views.corto, name='corto'),
-     path('members/', views.log_in, name='members'),
+     path('members/', views.home, name='home'),
      path('members/crearusuario/', views.registro, name='CrearUsuario'),
      path('bootstrap_builder/', views.bootstrap_builder, name='bootstrap_builder'),
      path('contact/', views.contact, name='contact'),
