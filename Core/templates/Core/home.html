@@ -171,8 +171,13 @@
           <a href="{% url 'license' %}" class="nav-link-custom">Licencia</a>
           <a href="{% url 'contact' %}" class="nav-link-custom">Contacto</a>
 
+<<<<<<< HEAD
           <a href="{% url 'members' %}" class="nav-link-custom d-flex align-items-center gap-1">
             <i class="bi bi-person fs-5"></i> Perfil
+=======
+          <a href=" {% url 'members' %} " class="nav-link-custom d-flex align-items-center gap-1">
+            <i class="bi bi-person fs-5"></i> LOGIN
+>>>>>>> origin/master
           </a>
         </nav>
 
@@ -199,7 +204,11 @@
               <li><a class="dropdown-item" href="{% url 'license' %}">Licencia</a></li>
               <li><a class="dropdown-item" href="{% url 'contact' %}">Contacto</a></li>
               <li><hr class="dropdown-divider"></li>
+<<<<<<< HEAD
               <li><a class="dropdown-item text-info fw-bold" href="{% url 'members' %}"><i class="bi bi-person me-2"></i>Perfil</a></li>
+=======
+              <li><a class="dropdown-item text-info fw-bold" href="{% url 'members' %}"><i class="bi bi-person me-2"></i>LOGIN</a></li>
+>>>>>>> origin/master
             </ul>
           </div>
 
@@ -249,6 +258,13 @@
             <a href="{% url 'education' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
               <span class="fw-medium">Plantillas de Educacion</span>
               <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">7</span>
+            </a>
+            <a href="{% url 'admin' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
+              <span class="fw-medium">
+                          Admin
+              </span>
+              <span class="badge rounded-pill bg-light text-muted fw-normal px-2 py-1">4
+              </span>
             </a>
 
             <a href="{% url 'admin' %}" class="category-item d-flex justify-content-between align-items-center text-decoration-none px-3 py-2 rounded-3 text-secondary">
